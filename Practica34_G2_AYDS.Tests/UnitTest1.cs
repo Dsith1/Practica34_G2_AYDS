@@ -10,5 +10,14 @@ namespace Practica34_G2_AYDS.Tests
         public void TestMethod1()
         {
         }
+
+        [TestMethod]
+        public void IniciarSesionPruebaCorrecta()
+        {
+            IniciarSesion iniciar = new IniciarSesion();
+            string resultado = iniciar.Login("hil@gmail.com", "123");
+            Assert.Equals(resultado, "Correcto");
+        }
+        
     }
 }

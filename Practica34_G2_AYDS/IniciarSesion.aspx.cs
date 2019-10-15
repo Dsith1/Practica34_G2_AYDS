@@ -27,34 +27,42 @@ namespace Practica34_G2_AYDS
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if(TextBox1.MaxLength <= 30 && TextBox1.MaxLength <= 10)
-            {
-                Login(TextBox1.Text, TextBox2.Text);
-            } 
-            else
-            {
-                Response.Write("<script language=javascript>alert('Tamaños muy Grandes');</script>");
-            }
+
+            Login(TextBox1.Text, TextBox2.Text);
+            
         }
-        public void Login(string nombre, string contra)
+        public string Login(string nombre, string contra)
         {
-            conectionString();
-            con.Open();
-            com.Connection = con;
-            com.CommandText = "select * from usuario where correo='" + nombre + "' and password='" + contra + "'";
-            dr = com.ExecuteReader();
-            if (dr.Read())
+            if (nombre.Length <= 30 && contra.Length <= 10)
             {
-                con.Close();
-                Response.Redirect("");
+                conectionString();
+                con.Open();
+                com.Connection = con;
+                com.CommandText = "select * from usuario where correo='" + nombre + "' and password='" + contra + "'";
+                dr = com.ExecuteReader();
+                if (dr.Read())
+                {
+                    con.Close();
+                    //Response.Redirect("");
+                    return "Correcto";
 
+                }
+
+                else
+                {
+                    con.Close();
+                    Response.Redirect("");
+                    return "Incorrecto";
+                }
+                
+                
             }
-
             else
             {
-                con.Close();
-                Response.Redirect("");
+                //Response.Write("<script language=javascript>alert('Tamaños muy Grandes');</script>");
+                return "Incorrecto";
             }
+
         }
         protected void Registrarse(object sender, EventArgs e)
         {
