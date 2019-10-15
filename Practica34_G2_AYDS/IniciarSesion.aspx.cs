@@ -43,7 +43,8 @@ namespace Practica34_G2_AYDS
                 if (dr.Read())
                 {
                     con.Close();
-                    //Response.Redirect("");
+                    Session["usuario"] = nombre;
+                    Response.Redirect("VerPerfil.aspx");
                     return "Correcto";
 
                 }
@@ -59,7 +60,7 @@ namespace Practica34_G2_AYDS
             }
             else
             {
-                //Response.Write("<script language=javascript>alert('Tamaños muy Grandes');</script>");
+                Response.Write("<script language=javascript>alert('Tamaños muy Grandes');</script>");
                 return "Incorrecto";
             }
 
