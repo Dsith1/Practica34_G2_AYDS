@@ -17,3 +17,11 @@ CREATE TABLE cuenta(
 	FOREIGN KEY(usuario) REFERENCES usuario(dpi)
 );
 
+Create Table Historial(
+	correlativo int identity primary key,
+	Descripcion varchar(max)
+
+);
+
+
+

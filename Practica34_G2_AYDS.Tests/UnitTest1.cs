@@ -10,5 +10,29 @@ namespace Practica34_G2_AYDS.Tests
         public void TestMethod1()
         {
         }
+
+        [TestMethod]
+        public void IniciarSesionPruebaCorrecta()
+        {
+            IniciarSesion iniciar = new IniciarSesion();
+            string resultado = iniciar.Login("hil@gmail.com", "123");
+            Assert.Equals(resultado, "Correcto");
+        }
+
+        [TestMethod]
+        public void Tranferencia_Exitosa()
+        {
+            Transferencia transferir = new Transferencia();
+            string cuentaSale = "1";
+            string cuentaentra = "2";
+
+            int monto = 1000;
+            int saldo1 = transferir.getSaldo(cuentaSale);
+
+            string resultado = transferir.transferir(cuentaSale, cuentaentra, monto,saldo1);
+
+            Assert.Equals(resultado, "Transferencia Realizada");
+        }
+
     }
 }
