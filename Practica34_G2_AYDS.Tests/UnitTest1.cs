@@ -20,11 +20,19 @@ namespace Practica34_G2_AYDS.Tests
         }
 
         [TestMethod]
-        public void RegistroCorrecto()
+        public void Tranferencia_Exitosa()
         {
-            IniciarSesion iniciar = new IniciarSesion();
-            int resultado = iniciar.RegistrarUsuario("1222222222222222","Carlos Joaquin", "Perez Miranda","carlos@gmail.com","hola");
-            Assert.AreEqual(resultado, 1);
+            Transferencia transferir = new Transferencia();
+            string cuentaSale = "1";
+            string cuentaentra = "2";
+
+            int monto = 1000;
+            int saldo1 = transferir.getSaldo(cuentaSale);
+
+            string resultado = transferir.transferir(cuentaSale, cuentaentra, monto,saldo1);
+
+            Assert.Equals(resultado, "Transferencia Realizada");
         }
+
     }
 }
