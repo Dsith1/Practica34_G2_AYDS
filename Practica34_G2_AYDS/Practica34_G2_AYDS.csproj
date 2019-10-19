@@ -125,6 +125,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Transferencia.aspx" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Imagenes\b1.jpg" />
     <Content Include="Imagenes\consultar.jpg" />
@@ -176,6 +178,7 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Coneccion.cs" />
     <Compile Include="consultaSaldo.aspx.cs">
       <DependentUpon>consultaSaldo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -222,6 +225,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Transferencia.aspx.cs">
+      <DependentUpon>Transferencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transferencia.aspx.designer.cs">
+      <DependentUpon>Transferencia.aspx</DependentUpon>
+    </Compile>
     <Compile Include="VerPerfil.aspx.cs">
       <DependentUpon>VerPerfil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -235,6 +245,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
