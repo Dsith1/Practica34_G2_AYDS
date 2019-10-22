@@ -15,7 +15,7 @@ namespace Practica34_G2_AYDS
         SqlConnection con = new SqlConnection();
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
-        string cadena = "data source=diegoarmira; database=BD_Banco; integrated security = true;";
+        string cadena = "data source=HILBERTPC; database=BD_Banco; integrated security = true;";
         string user;
         protected void Page_Load(object sender, EventArgs e)
         {

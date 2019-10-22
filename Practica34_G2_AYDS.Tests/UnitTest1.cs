@@ -43,5 +43,13 @@ namespace Practica34_G2_AYDS.Tests
             Assert.AreEqual(resultado, 1);
         }
 
+        [TestMethod]
+        public void consultaSaldoTest()
+        {
+            consultaSaldo saldo = new consultaSaldo();
+            string resultado = saldo.returnSaldo("2015");
+            Assert.AreEqual(resultado, "");
+        }
+
     }
 }
