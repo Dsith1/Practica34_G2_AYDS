@@ -15,11 +15,13 @@ namespace Practica34_G2_AYDS
         SqlConnection con = new SqlConnection();
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
-        string cadena = "data source=diegoarmira; database=BD_Banco; integrated security = true;";
-
+        string cadena = "data source=HILBERTPC; database=BD_Banco; integrated security = true;";
+        string user;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            //CORREO ELECTRONICO COMO USUARIO
+            user = Session["usuario"].ToString();
+            Label1.Text = user;
         }
 
         void conectionString()
@@ -62,6 +64,11 @@ namespace Practica34_G2_AYDS
                 //ERROR 
             }
             return "";
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

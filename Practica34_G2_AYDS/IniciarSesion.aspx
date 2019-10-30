@@ -51,19 +51,19 @@
                   <div class="letter-w3ls">
                      
                         <div class="form-left-to-w3l">
-                           <asp:TextBox ID="TextBox3" runat="server" placeholder="DPI"></asp:TextBox>
+                           <asp:TextBox ID="TextBox3" runat="server" placeholder="DPI" MaxLength="13"></asp:TextBox>
                         </div>
                         <div class="form-left-to-w3l">
-                           <asp:TextBox ID="TextBox4" runat="server" placeholder="Nombres"></asp:TextBox>
+                           <asp:TextBox ID="TextBox4" runat="server" placeholder="Nombres" MaxLength="30"></asp:TextBox>
                         </div>
                         <div class="form-left-to-w3l">
-                           <asp:TextBox ID="TextBox5" runat="server" placeholder="Apellidos"></asp:TextBox>
+                           <asp:TextBox ID="TextBox5" runat="server" placeholder="Apellidos" MaxLength="30"></asp:TextBox>
                         </div>
                         <div class="form-left-to-w3l">
-                           <asp:TextBox ID="TextBox6" runat="server" placeholder="Correo" TextMode="Email"></asp:TextBox>
+                           <asp:TextBox ID="TextBox6" runat="server" placeholder="Correo" TextMode="Email" MaxLength="20"></asp:TextBox>
                         </div>
                         <div class="form-left-to-w3l margin-zero">
-                           <asp:TextBox ID="TextBox7" runat="server" placeholder="Contraseña" TextMode="Password"></asp:TextBox>
+                           <asp:TextBox ID="TextBox7" runat="server" placeholder="Contraseña" TextMode="Password" MaxLength="20"></asp:TextBox>
                         </div>
                         <div class="btnn">
                            <asp:Button ID="Button2" runat="server" Text="Aceptar" Height="36px" OnClick="Registrarse" Width="168px" BackColor="#3399FF" BorderStyle="Solid" ForeColor="Black" />
