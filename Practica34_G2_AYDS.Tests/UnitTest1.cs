@@ -28,8 +28,9 @@ namespace Practica34_G2_AYDS.Tests
 
             int monto = 1000;
             int saldo1 = transferir.getSaldo(cuentaSale);
+            int saldo2 = transferir.getSaldo(cuentaentra);
 
-            string resultado = transferir.transferir(cuentaSale, cuentaentra, monto,saldo1);
+            string resultado = transferir.transferir(cuentaSale, cuentaentra, monto,saldo1,saldo2);
 
             Assert.Equals(resultado, "Transferencia Realizada");
         }

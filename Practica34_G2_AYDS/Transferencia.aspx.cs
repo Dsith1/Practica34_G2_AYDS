@@ -35,7 +35,7 @@ namespace Practica34_G2_AYDS
                 saldo2 = saldo2 - monto;
                 Coneccion.Operar("Tranferencia", "@cuenta ," + cuentaSale + ";@monto," + saldo2);
 
-                return "Transferencia Realizada"
+                return "Transferencia Realizada";
             }
             catch(Exception ex)
             {
