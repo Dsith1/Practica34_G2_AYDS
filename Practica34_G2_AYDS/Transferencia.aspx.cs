@@ -12,7 +12,7 @@ namespace Practica34_G2_AYDS
         Coneccion Coneccion;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Coneccion = new Coneccion("Cadena Conexion");
+            Coneccion = new Coneccion("Data Source=bdpractica4.c2tdf5bqbyqf.us-east-1.rds.amazonaws.com;Initial Catalog=BD_Banco;User ID=admin;Password=analisis123");
         }
 
         public int getSaldo(string cuenta)
@@ -42,7 +42,33 @@ namespace Practica34_G2_AYDS
                 return null;
             }
 
-            
+        }
+
+        protected void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtCuenta1.Text = "";
+            txtCuenta2.Text = "";
+        }
+
+        protected void btnTransferencia_Click(object sender, EventArgs e)
+        {
+            string cuentas = txtCuenta1.Text;
+            string cuentae = txtCuenta2.Text;
+            string montoc = txtmonto.Text;
+
+            int monto = Int16.Parse(montoc);
+
+            int saldo = getSaldo(cuentas);
+            int saldo2 = getSaldo(cuentae);
+
+            if (saldo < monto)
+            {
+                lblRespuestaT.Text = "Saldo Insuficiente";
+            }
+            else
+            {
+                lblRespuestaT.Text = transferir(cuentas, cuentae, monto, saldo2, saldo);
+            }
 
         }
     }
