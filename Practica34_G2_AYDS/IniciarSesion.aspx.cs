@@ -14,7 +14,7 @@ namespace Practica34_G2_AYDS
         SqlConnection con = new SqlConnection();
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
-        string cadena = "data source=HILBERTPC; database=BD_Banco; integrated security = true;";
+        string cadena = "Data Source=bdpractica4.c2tdf5bqbyqf.us-east-1.rds.amazonaws.com;Initial Catalog=BD_Banco;User ID=admin;Password=analisis123";
 
         protected void Page_Load(object sender, EventArgs e)
         {
