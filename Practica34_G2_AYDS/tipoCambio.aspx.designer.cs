@@ -10,7 +10,7 @@
 namespace Practica34_G2_AYDS {
     
     
-    public partial class consultaSaldo {
+    public partial class WebForm1 {
         
         /// <summary>
         /// Control Label1.
