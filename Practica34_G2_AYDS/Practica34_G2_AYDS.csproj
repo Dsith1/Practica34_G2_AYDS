@@ -127,6 +127,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Transferencia.aspx" />
     <Content Include="tipoCambio.aspx" />
+    <Content Include="WebForm2.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Imagenes\b1.jpg" />
     <Content Include="Imagenes\consultar.jpg" />
@@ -253,6 +254,13 @@
     </Compile>
     <Compile Include="tipoCambio.aspx.designer.cs">
       <DependentUpon>tipoCambio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
