@@ -75,7 +75,7 @@ namespace Practica34_G2_AYDS
         {
 
             int consulta = 0;
-            if (dpi.Length <= 13 && name.Length <= 30 && ape.Length <= 30 && correo.Length <= 20 && pass.Length <= 20)
+            if (dpi.Length == 13 && name.Length <= 30 && ape.Length <= 30 && correo.Length <= 20 && pass.Length <= 20)
             {
                 try
                 {
