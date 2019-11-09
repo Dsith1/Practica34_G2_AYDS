@@ -21,7 +21,7 @@
    <body>
       <div class="mid-class">
          <div class="art-right-w3ls">
-            <h2>Inicia Sesion y o Registrate</h2>
+            <h2>Log in o crea una nueva cuenta</h2>
              <form id="form1" runat="server">
                <div class="main">
                   <div class="form-left-to-w3l">
@@ -66,7 +66,7 @@
                            <asp:TextBox ID="TextBox7" runat="server" placeholder="Contraseña" TextMode="Password" MaxLength="20"></asp:TextBox>
                         </div>
                         <div class="btnn">
-                           <asp:Button ID="Button2" runat="server" Text="Aceptar" Height="36px" OnClick="Registrarse" Width="168px" BackColor="#3399FF" BorderStyle="Solid" ForeColor="Black" />
+                           <asp:Button ID="Button2" runat="server" Text="Aceptar Modificacion" Height="36px" OnClick="Registrarse" Width="168px" BackColor="#3399FF" BorderStyle="Solid" ForeColor="Black" />
                            <br>
                         </div>
                    
