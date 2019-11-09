@@ -40,9 +40,11 @@ namespace Practica34_G2_AYDS
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+      
+
+        protected void Button1_Click1(object sender, EventArgs e)
         {
-            txtDIa.Text=("Cambio del dia"+a.TipoCambioDia().CambioDia.ToString()+" cambio dolar"+ a.TipoCambioDia().CambioDolar.ToString())
+            txtDia.Text = ("Cambio del dia" + a.TipoCambioDia().CambioDia.ToString() + " cambio dolar" + a.TipoCambioDia().CambioDolar.ToString());
         }
     }
 }

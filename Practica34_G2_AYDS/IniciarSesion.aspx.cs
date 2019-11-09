@@ -73,8 +73,18 @@ namespace Practica34_G2_AYDS
             }
             else
             {
-                Response.Write("<script language=javascript>alert('Tamaños muy Grandes');</script>");
+               // Response.Write("<script language=javascript>alert('Tamaños muy Grandes');</script>");
                 return "Incorrecto";
+
+                //Arre este es un comentario ajajaja XD Xd XD
+                //Yo querisa sacar compi pero me rompi la rodilla
+                //mas de algun commit funciona
+                //ect ya no se que poner
+                //este es el ultimo comentario
+                //bueno tal vez no
+                //Este si es el ultimo
+                //ok no
+                //ahora si ya es ultimo
             }
 
         }
@@ -115,6 +125,20 @@ namespace Practica34_G2_AYDS
             }
                 
             return consulta;
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            //Arre este es un comentario ajajaja XD Xd XD
+            //Yo querisa sacar compi pero me rompi la rodilla
+            //mas de algun commit funciona
+            //ect ya no se que poner
+            //Login(TextBox1.Text, TextBox2.Text);
+            //este es el ultimo comentario
+            //bueno tal vez no
+            //Este si es el ultimo
+            //ok no
+            //ahora si ya es ultimo
         }
     }
 }
