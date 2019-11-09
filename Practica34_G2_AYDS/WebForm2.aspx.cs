@@ -7,11 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace Practica34_G2_AYDS
 {
-    public partial class WebForm2 : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
 
-        }
-    }
+	public partial class WebForm21 : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
+
 }
