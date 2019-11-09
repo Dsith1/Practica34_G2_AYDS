@@ -34,6 +34,22 @@ namespace Practica34_G2_AYDS.Tests
 
             Assert.Equals(resultado, "Transferencia Realizada");
         }
+		
+		[TestMethod]
+        public void RegistroCorrecto()
+        {
+            IniciarSesion iniciar = new IniciarSesion();
+            int resultado = iniciar.RegistrarUsuario("1222222222222222","Carlos Joaquin", "Perez Miranda","carlos@gmail.com","hola");
+            Assert.AreEqual(resultado, 1);
+        }
+
+        [TestMethod]
+        public void consultaSaldoTest()
+        {
+            consultaSaldo saldo = new consultaSaldo();
+            string resultado = saldo.returnSaldo("2015");
+            Assert.AreEqual(resultado, "");
+        }
 
     }
 }
