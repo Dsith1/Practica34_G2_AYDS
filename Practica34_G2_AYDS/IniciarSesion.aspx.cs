@@ -14,8 +14,8 @@ namespace Practica34_G2_AYDS
         SqlConnection con = new SqlConnection();
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
-        string cadena = "Data Source=bdpractica4.c2tdf5bqbyqf.us-east-1.rds.amazonaws.com;Initial Catalog=BD_Banco;User ID=admin;Password=Analisis1";
-
+        string cadena = "Data Source=bdpractica4.c2tdf5bqbyqf.us-east-1.rds.amazonaws.com;Initial Catalog=BD_Banco;User ID=admin;Password=analisis123";
+        //bdpractica4.c2tdf5bqbyqf.us-east-1.rds.amazonaws.com
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -67,33 +67,41 @@ namespace Practica34_G2_AYDS
         }
         protected void Registrarse(object sender, EventArgs e)
         {
-            RegistrarUsuario();
+            RegistrarUsuario(TextBox3.Text, TextBox4.Text, TextBox5.Text, TextBox6.Text, TextBox7.Text);
 
         }
 
-        public void RegistrarUsuario()
+        public int RegistrarUsuario(string dpi, string name, string ape, string correo, string pass)
         {
+
             int consulta = 0;
-            try
+            if (dpi.Length == 13 && name.Length <= 30 && ape.Length <= 30 && correo.Length <= 20 && pass.Length <= 20)
             {
-                SqlConnection con = new SqlConnection(cadena);
-                con.Open();
-                SqlCommand cmd = new SqlCommand("CrearUsuario", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@dpi_i", TextBox3.Text);
-                cmd.Parameters.AddWithValue("@nombres_i", TextBox4.Text);
-                cmd.Parameters.AddWithValue("@apellidos_i", TextBox5.Text);
-                cmd.Parameters.AddWithValue("@correo_i", TextBox6.Text);
-                cmd.Parameters.AddWithValue("@password_i", TextBox7.Text);
-                consulta = cmd.ExecuteNonQuery();
-                con.Close();
-                Response.Write("<script language=javascript>alert('Registrado Exitosamente');</script>");
+                try
+                {
+                    SqlConnection con = new SqlConnection(cadena);
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("CrearUsuario", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@dpi_i", dpi);
+                    cmd.Parameters.AddWithValue("@nombres_i", name);
+                    cmd.Parameters.AddWithValue("@apellidos_i", ape);
+                    cmd.Parameters.AddWithValue("@correo_i", correo);
+                    cmd.Parameters.AddWithValue("@password_i", pass);
+                    consulta = cmd.ExecuteNonQuery();
+                    con.Close();
+                    Response.Write("<script language=javascript>alert('Registrado Exitosamente');</script>");
+                    //return "Correcto";
+                }
+                catch (Exception ex)
+                {
+                    //throw new Exception("Error al insertar el objeto: " + ex.Message);
+                    Console.WriteLine("Error al insertar el nuevo usuario: " + ex.Message);
+                    //return "Incorrecto";
+                }
             }
-            catch (Exception ex)
-            {
-                //throw new Exception("Error al insertar el objeto: " + ex.Message);
-                Console.WriteLine("Error al insertar el nuevo usuario: " + ex.Message);
-            }
+                
+            return consulta;
         }
     }
 }

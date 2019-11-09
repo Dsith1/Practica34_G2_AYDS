@@ -11,7 +11,7 @@ namespace Practica34_G2_AYDS
     public partial class VerPerfil : System.Web.UI.Page
     {
         string user;
-        string cadena = "data source=SERGIO\\SERGIO; database=BD_Banco; integrated security = true;";
+        string cadena = "Data Source=bdpractica4.c2tdf5bqbyqf.us-east-1.rds.amazonaws.com;Initial Catalog=BD_Banco;User ID=admin;Password=analisis123";
         SqlConnection con = new SqlConnection();
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
