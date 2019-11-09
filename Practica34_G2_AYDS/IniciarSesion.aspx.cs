@@ -87,7 +87,7 @@ namespace Practica34_G2_AYDS
                 cmd.Parameters.AddWithValue("@password_i", TextBox7.Text);
                 consulta = cmd.ExecuteNonQuery();
                 con.Close();
-                Response.Write("<script language=javascript>alert('Registrado Exitosamente');</script>");
+                Response.Write("<script language=javascript>alert('Registrado Exitosamente en la Calificacion');</script>");
             }
             catch (Exception ex)
             {
