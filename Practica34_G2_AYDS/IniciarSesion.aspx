@@ -21,7 +21,7 @@
    <body>
       <div class="mid-class">
          <div class="art-right-w3ls">
-            <h2>Inicia Sesion y o Registrate</h2>
+            <h2>Log in o crea una nueva cuenta</h2>
              <form id="form1" runat="server">
                <div class="main">
                   <div class="form-left-to-w3l">
