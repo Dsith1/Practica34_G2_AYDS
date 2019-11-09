@@ -11,6 +11,19 @@ namespace Practica34_G2_AYDS
 {
     public partial class IniciarSesion : System.Web.UI.Page
     {
+
+        //Arre este es un comentario ajajaja XD Xd XD
+        //Yo querisa sacar compi pero me rompi la rodilla
+        //mas de algun commit funciona
+        //ect ya no se que poner
+        //este es el ultimo comentario
+        //bueno tal vez no
+        //Este si es el ultimo
+        //ok no
+        //ahora si ya es ultimo
+
+
+
         SqlConnection con = new SqlConnection();
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
