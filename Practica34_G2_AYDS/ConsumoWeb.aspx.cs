@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml;
 using Practica34_G2_AYDS.ServiceReference1;
 
 namespace Practica34_G2_AYDS
@@ -21,8 +22,18 @@ namespace Practica34_G2_AYDS
 
         public void Tipo_Cambio()
         {
-         Console.WriteLine(a.TipoCambioDia().CambioDia.ToString());
-         Console.WriteLine(a.TipoCambioDia().CambioDolar.ToString());
+            string respuesta = "";
+            txtDia.Text=a.TipoCambioDiaString();
+            XmlDocument lector = new XmlDocument();
+            lector.LoadXml(a.TipoCambioDiaString());
+            XmlNodeList parentNode = lector.GetElementsByTagName("referencia");
+            respuesta +="Referencia:"+ parentNode[0].InnerText;
+            parentNode = lector.GetElementsByTagName("fecha");
+            respuesta += " al dia " + parentNode[0].InnerText;
+
+
+            txtDia.Text = respuesta;
+
         }
 
         public void Tipo_cambio(string inicio)
@@ -31,7 +42,9 @@ namespace Practica34_G2_AYDS
 
             for (int x = 0; x < datos.TotalItems; x++)
             {
-                Console.WriteLine(datos.Vars[x].compra);
+                txtTipoDesde.Text +="fecha:"+ datos.Vars[x].fecha.ToString();
+                txtTipoDesde.Text +=" compra:"+datos.Vars[x].compra.ToString();
+                txtTipoDesde.Text += " venta:" + datos.Vars[x].venta.ToString()+"\n";
             }
         }
 
@@ -42,7 +55,16 @@ namespace Practica34_G2_AYDS
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             txtDIa.Text=("Cambio del dia"+a.TipoCambioDia().CambioDia.ToString()+" cambio dolar"+ a.TipoCambioDia().CambioDolar.ToString())
+=======
+            Tipo_Cambio();
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Tipo_cambio(txtDiaInicio.Text);
+>>>>>>> Stashed changes
         }
     }
 }
