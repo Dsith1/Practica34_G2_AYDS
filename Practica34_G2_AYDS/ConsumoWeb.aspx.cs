@@ -44,7 +44,7 @@ namespace Practica34_G2_AYDS
             {
                 txtTipoDesde.Text +="fecha:"+ datos.Vars[x].fecha.ToString();
                 txtTipoDesde.Text +=" compra:"+datos.Vars[x].compra.ToString();
-                txtTipoDesde.Text += " venta:" + datos.Vars[x].venta.ToString()+"\n";
+                txtTipoDesde.Text += " venta:" + datos.Vars[x].venta.ToString()+"\\n";
             }
         }
 
@@ -53,18 +53,16 @@ namespace Practica34_G2_AYDS
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+      
+
+        protected void Button1_Click1(object sender, EventArgs e)
         {
-
-            txtDIa.Text=("Cambio del dia"+a.TipoCambioDia().CambioDia.ToString()+" cambio dolar"+ a.TipoCambioDia().CambioDolar.ToString())
-
             Tipo_Cambio();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             Tipo_cambio(txtDiaInicio.Text);
-
         }
     }
 }
