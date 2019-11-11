@@ -55,16 +55,16 @@ namespace Practica34_G2_AYDS
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
+
             txtDIa.Text=("Cambio del dia"+a.TipoCambioDia().CambioDia.ToString()+" cambio dolar"+ a.TipoCambioDia().CambioDolar.ToString())
-=======
+
             Tipo_Cambio();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             Tipo_cambio(txtDiaInicio.Text);
->>>>>>> Stashed changes
+
         }
     }
 }

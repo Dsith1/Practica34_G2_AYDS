@@ -10,8 +10,6 @@
 <body>
     <form id="form1" runat="server">
         <div>
-<<<<<<< Updated upstream
-=======
             <asp:Label ID="Label1" runat="server" Text="Cambio del Dia"></asp:Label>
             <br />
             <asp:TextBox ID="txtDia" runat="server" Width="465px"></asp:TextBox>
@@ -25,7 +23,6 @@
             <asp:TextBox ID="txtTipoDesde" runat="server" Height="162px" TextMode="MultiLine" Width="605px"></asp:TextBox>
             <br />
             <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Ver desde" />
->>>>>>> Stashed changes
         </div>
     </form>
 </body>
